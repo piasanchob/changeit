@@ -118,15 +118,15 @@ VALUES
 
 GO
 
-CREATE PROCEDURE InsertarTipoHabitos AS
+CREATE PROCEDURE TipoHabitos AS
 
 INSERT INTO dbo.TipoHabitos (nombre, medida)
 VALUES
 ('Cantidad de material', 'Kg'),
 ('Cantidad de líquido', 'L'),
 ('Cantidad de área', 'Km2'),
-('Cantidad de animales', 'animales')
-
+('Cantidad de animales', 'animales'),
+('Cantidad de monóxido de cárbono', 'mg')
 GO
 
 
@@ -140,12 +140,12 @@ VALUES
 ('Reciclar Cartón','Reciclar el cartón','imagen',0,'2021-01-15 14:23:45','2021-01-15 14:23:45',1),
 ('Usar bolsas reutilizables','Uso de bolsas reutilizables en compras','imagen',0,'2020-02-20 20:10:44','2020-06-23 12:20:45',1),
 ('Reducir impresión de hojas','Reducción de imprimir hojas','imagen',0,'2021-01-11 08:25:40','2021-05-11 05:06:00',1),
-('Durar menos bañandose','Durar menos tiempo bañandose para reducir agua','imagen',1,'2020-05-02 05:23:00','2021-01-11 15:00:44',2),
-('Reducir la ingesta de carne','Reducción de la ingesta masiva de carne','imagen',1,'2020-12-24 12:00:00','2021-24-03 07:23:33',4),
+('Durar menos bañandose','Durar menos tiempo bañandose para reducir agua','imagen',0,'2020-05-02 05:23:00','2021-01-11 15:00:44',2),
+('Reducir la ingesta de carne','Reducción de la ingesta masiva de carne','imagen',0,'2020-12-24 12:00:00','2021-24-03 07:23:33',4),
 ('Reducir la compra de ropa masiva repetidamente','No comprar ropa masiva seguidamente','imagen',0,'2020-08-13 16:24:45','2021-05-18 24:00:44',1),
 ('Utilizar más el transporte público o bicicletas','Reducción del uso de carros y su humo','imagen',0,'2021-02-19 20:00:09','2021-06-01 01:05:12',2),
-('Eliminar uso de plástico de un solo uso','Reducción de plástico de un solo uso','imagen',1,'2020-10-27 19:00:00','2021-04-12 04:13:00',1),
-('Reducir el humo de cigarro','Reducción del cigarro y su humo','imagen',0,'2020-08-11 08:22:15','2021-04-18 12:23:45',2)
+('Eliminar uso de plástico de un solo uso','Reducción de plástico de un solo uso','imagen',0,'2020-10-27 19:00:00','2021-04-12 04:13:00',1),
+('Reducir el humo de cigarro','Reducción del cigarro y su humo','imagen',0,'2020-08-11 08:22:15','2021-04-18 12:23:45',3)
 
 
 
