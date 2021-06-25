@@ -191,6 +191,22 @@ CREATE PROCEDURE Insertar100kUsuarios AS
 	END
 GO
 
+CREATE PROCEDURE InsertarAportes AS
+
+INSERT INTO dbo.Aportes (nombre, descripcion, habitoid)
+VALUES
+('Tortugas salvadas', 'Ha logrado salvar torugas gracias a no usar pajillas', 1),
+('Reciclador', 'Ha logrado disminuir el consumo de cartón', 2),
+('Reutilizad@r de bolsas', 'Ha contribuido al medio ambiente usando bolsas de tel en lugar de bolsas plásticas', 3),
+('Reducción de hojas', 'Al disminuir el consumo de papel, ha ayudado a salvar areas verdes',4),
+('Menos Ducha', 'Ha logrado ahorrar litros de agua al disminuir el tiempo de ducha',5),
+('Menos Carne', 'Ha logrado salvar vacas al disminuir el consumo de carne',6),
+('Menos Ropa', 'ha logrado ahorrar litros de agua al disminuir el tiempo de ducha',7),
+('Trabnsporte Ecologico', 'Ha reducido la contaminación del aire al usar transporte público en vez de vehículo particular',8),
+('No plastico', 'Ha logrado reducir la cantidad de plastico de un solo uso utilizada',9),
+('No fumado', 'Ha logrado disminuir la contaminación ambiental y mejorar la salud de otros al no fumar',10)
+GO
+
 
 CREATE PROCEDURE LlenarBaseDeDatos AS
 EXEC InsertarRedesSociales
