@@ -102,6 +102,18 @@ CREATE PROCEDURE AplicarHabito AS
 
 GO
 
+CREATE PROCEDURE GenerarPosteo AS
+
+	DECLARE @tag1 int
+	DECLARE @tag2 int
+	DECLARE @tag3 int
+	DECLARE @tag4 int
+	DECLARE @tag5 int
+	DECLARE @usuario bigint
+
+	--PRIMERO GENERAR EL RESUMEN
+
+
 
 
 
