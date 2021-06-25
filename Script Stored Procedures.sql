@@ -98,16 +98,126 @@ CREATE PROCEDURE AplicarHabito AS
 
 
 	INSERT INTO dbo.HabitosAplicados(usuario, habito, posttime, localizacion)
-	VALUES(@usuario, @habito, GETDATE(), @localizacion)
+	VALUES(3, @habito, GETDATE(), @localizacion)
+
+GO
+
+CREATE PROCEDURE GenerarResumen 
+	@usuarioid bigint
+AS
+
+	DECLARE @contador int
+	DECLARE @aporteid bigint
+	DECLARE @aporte nvarchar(100)
+	DECLARE @habitocontador int
+	DECLARE @cantidad int
+	DECLARE @caption nvarchar(500)
+
+	--PRIMERO GENERAR EL RESUMEN
+
+	SET @caption = ''
+
+	--SELECT habito FROM dbo.HabitosAplicados WHERE ((posttime BETWEEN DATEADD(MONTH, -1, GETDATE()) AND GETDATE()) AND usuario=@usuarioid) GROUP BY habito
+
+	--SELECT habito, COUNT(habitoaplicadoid) cantidad FROM dbo.HabitosAplicados WHERE ((posttime BETWEEN DATEADD(MONTH, -1, GETDATE()) AND GETDATE()) AND usuario=@usuarioid) GROUP BY habito
+
+	SET @contador = (SELECT COUNT(habito) FROM (SELECT habito FROM dbo.HabitosAplicados WHERE ((posttime BETWEEN DATEADD(MONTH, -1, GETDATE()) AND GETDATE()) AND usuario=@usuarioid) GROUP BY habito) AS habito_aux)
+
+	SET @habitocontador = 1
+
+	BEGIN TRAN
+	
+	WHILE @habitocontador <= (SELECT MAX(habitoid) FROM dbo.Habitos) BEGIN
+
+	IF @habitocontador IN (SELECT habito FROM dbo.HabitosAplicados WHERE ((posttime BETWEEN DATEADD(MONTH, -1, GETDATE()) AND GETDATE()) AND usuario=@usuarioid) GROUP BY habito)
+	BEGIN
+		
+		SET @aporteid = (SELECT aporteid FROM dbo.Aportes WHERE dbo.Aportes.habitoid=@habitocontador)
+
+		SET @cantidad = (SELECT cantidad FROM (SELECT habito, COUNT(habitoaplicadoid) cantidad FROM dbo.HabitosAplicados WHERE ((posttime BETWEEN DATEADD(MONTH, -1, GETDATE()) AND GETDATE()) AND usuario=@usuarioid) GROUP BY habito) AS A WHERE A.habito=@habitocontador)
+
+		INSERT INTO dbo.AportesPorUsuario (aporte, cantidad, posttime, usuario)
+		VALUES (@aporteid, @cantidad, GETDATE(), @usuarioid)
+
+
+		SET @aporte = (SELECT nombre FROM dbo.Aportes WHERE dbo.Aportes.aporteid=@aporteid)
+
+		
+		SET @caption = @caption + '    ' +  @aporte + 'CANT: ' + CAST(@cantidad as nvarchar(100))
+	END
+	
+	SET @habitocontador = @habitocontador + 1
+
+	END
+
+	INSERT INTO dbo.Resumenes (fecha, caption, usuario)
+	VALUES (GETDATE(), @caption, @usuarioid)
+	
+	COMMIT
+GO
+
+CREATE PROCEDURE HacerPosteo AS
+
+	DECLARE @tag1 nvarchar(20)
+	DECLARE @tag2 nvarchar(20)
+	DECLARE @tag3 nvarchar(20)
+	DECLARE @tag4 nvarchar(20)
+	DECLARE @tag5 nvarchar(20)
+	DECLARE @usuarioid bigint
+	DECLARE @resumenid bigint
+	DECLARE @caption nvarchar(500)
+	DECLARE @URL nvarchar(128)
+	DECLARE @redsocialid smallint
+	DECLARE @URLredsocial nvarchar(50)
+	DECLARE @postid bigint
+
+	-- SE GENERA RESUMEN y SACO DATOS
+
+	SET @usuarioid = FLOOR(RAND()*100000 + 1)
+
+	EXEC GenerarResumen @usuarioid
+
+	SET @resumenid = (SELECT MAX(resumenid) FROM dbo.Resumenes WHERE dbo.Resumenes.usuario=@usuarioid)
+
+	SET @caption = (SELECT caption FROM dbo.Resumenes 
+	WHERE dbo.Resumenes.usuario=@usuarioid AND dbo.Resumenes.resumenid=@resumenid)
+
+	SET @redsocialid = (SELECT redsocial FROM ValidacionRRSS INNER JOIN Users ON ValidacionRRSS.validacionid=Users.validaciontoken WHERE Users.userid=@usuarioid)
+
+	-- SE GENERAN LOS TAGS PARA EL URL Y SE HACE LA PUBLICACION
+
+	SET @tag1 = FLOOR(RAND()*100000)
+	SET @tag2 = FLOOR(RAND()*100000)
+	SET @tag3 = FLOOR(RAND()*100000)
+	SET @tag4 = FLOOR(RAND()*100000)
+	SET @tag5 = FLOOR(RAND()*100000)
+
+	BEGIN TRAN
+					
+	SET @URLredsocial = (SELECT URL FROM RedesSociales WHERE redessocialesid=@redsocialid)
+	SET @URL = @URLredsocial + 'Tag1=' + @tag1 + 'Tag2=' + @tag2 + 'Tag3=' + @tag3 + 'Tag4=' + @tag4 + 'Tag5=' + @tag5
+
+	INSERT INTO Publicaciones (caption, URL, fecha, deleted, updatepost, redsocial, usuario, resumen)
+	VALUES (@caption, @URL, GETDATE(), 0, 0, @redsocialid, @usuarioid, @resumenid)
+
+	SET @postid = (SELECT MAX(publicacionid) FROM dbo.Publicaciones)
+
+	INSERT INTO dbo.Tags (tag, tipotag, referenceid)
+	VALUES
+	(@tag1, 1, @postid),
+	(@tag2, 1, @postid),
+	(@tag3, 1, @postid),
+	(@tag4, 1, @postid),
+	(@tag5, 1, @postid)
+
+	COMMIT
 
 GO
 
 
-
-
-
-DBCC CHECKIDENT ('changeit.dbo.ValidacionRRSS', RESEED, 0);
-DBCC CHECKIDENT ('changeit.dbo.HabitosAplicados', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.Publicaciones', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.Tags', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.Resumenes', RESEED, 0);
 
 SELECT * FROM RedesSociales
 SELECT * FROM Users
@@ -115,15 +225,20 @@ select * from ValidacionRRSS
 select * from HabitosAplicados
 
 
-delete from ValidacionRRSS
-delete from Users
-delete from Habitos
-delete from HabitosAplicados
+select * from Publicaciones
+select * from Tags
+select * from Resumenes
+
+
+-- delete from Publicaciones
+-- delete from Tags
+-- delete from Resumenes
+-- delete from HabitosAplicados
 
 EXEC RegistrarUsuario 'Twitter'
 
 
-EXEC AplicarHabito
+EXEC HacerPosteo
 
 
 select * from dbo.Fast_Food_Restaurants
