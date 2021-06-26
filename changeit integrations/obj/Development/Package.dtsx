@@ -1,0 +1,1374 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/24/2021 3:52:03 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-CM9OC0K"
+  DTS:CreatorName="DESKTOP-CM9OC0K\Andrey Sancho"
+  DTS:DTSID="{D2609E63-4CA3-467A-B016-1AA2E9F2A33F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.167"
+  DTS:LocaleID="5130"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{AAB2C39D-1C98-4D7F-B42A-C8D76D639458}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[change_it.sa]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{934B28E2-AA25-4221-BFDA-47A9CD2BADBF}"
+      DTS:ObjectName="change_it.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=sa;Dsn=change_it;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADaha4NMVZ9UyFFfjSAVsinPogd8aWZ/r2Ub8Ez+wgt0wAAAAAOgAAAAAIAACAAAACLpjG6M1QcfbtUMQihipY2TQXKCZU7pHAJH08KuBTXiBAAAAA0MvnOyMUR7u2wmRJe149cQAAAAFU3aK4hdpk5FKz8t8MZlSCikszY4NkWJ15kqi0LKBNl1+JkgZ87sveuEBsRERb2A2jcCsAhKcOqZg/p8Iq/YCY</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[conexion con csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{74F828AA-778A-4887-8FB3-4488529C7329}"
+      DTS:ObjectName="conexion con csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="5130"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\user\Documents\TEC\BASES1NUÑEZ\Fast_Food_Restaurants.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{A290882D-41D0-4553-9272-8534D08833F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateAdded"
+              DTS:DTSID="{E1F7C6B4-4AFF-407A-9597-8CEE882DF51A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateUpdated"
+              DTS:DTSID="{5E0B39B6-1347-4EBF-B4A1-B62EECBDEFC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="address"
+              DTS:DTSID="{AB97E73C-9B11-4EA9-9A31-150D821582F1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="categories"
+              DTS:DTSID="{490967F6-E445-4D17-AE65-3C1647F2E6DE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{8860BE5B-3B91-48B5-8A53-DA6D62BD7414}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{114F7E54-4EE2-42EA-9A0F-9196ACAE3B60}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="keys"
+              DTS:DTSID="{13D25278-EDBC-4C3E-9326-895C312C4CBB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{ABCA7480-4DAC-4A5B-A073-DC27D6DEE8B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{F47BD009-9B26-41CF-BFFC-EA9088E5DB94}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{E86FC345-F3AD-4A93-8EED-66CD7C9D7F79}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postalCode"
+              DTS:DTSID="{786611F1-1988-4238-88E0-EFFF9CDD6E9F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="province"
+              DTS:DTSID="{38177A51-701C-48F9-A900-360DD8409280}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sourceURLs"
+              DTS:DTSID="{F4FF6E74-A11A-49E8-A25F-680F0751319B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="websites"
+              DTS:DTSID="{034841F7-A966-42E2-BF95-C4F072E3DC86}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-CM9OC0K]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C5B05401-7649-44B3-9FD6-11BB70658BA3}"
+      DTS:ObjectName="DESKTOP-CM9OC0K">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-CM9OC0K;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-CM9OC0K\MSSQLSERVER01]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6BB9136E-B239-43A3-8E0F-1ACE7510B4D5}"
+      DTS:ObjectName="DESKTOP-CM9OC0K\MSSQLSERVER01">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-CM9OC0K\MSSQLSERVER01;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Cargar datos"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C0908A07-F330-4CFC-AD4B-3DBB9ED4A223}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar datos"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Cargar datos\excel csv"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="5130"
+              name="excel csv"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar datos\excel csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[conexion con csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[conexion con csv]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      length="50"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[dateAdded]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[dateAdded]"
+                      length="50"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[dateAdded]"
+                      name="dateAdded"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[dateUpdated]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[dateUpdated]"
+                      length="50"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[dateUpdated]"
+                      name="dateUpdated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[address]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[address]"
+                      length="50"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[address]"
+                      name="address"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[categories]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[categories]"
+                      length="50"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[categories]"
+                      name="categories"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[city]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[city]"
+                      length="50"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[city]"
+                      name="city"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[country]"
+                      length="50"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[country]"
+                      name="country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[keys]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[keys]"
+                      length="50"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[keys]"
+                      name="keys"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[latitude]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[latitude]"
+                      length="50"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[latitude]"
+                      name="latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[longitude]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[longitude]"
+                      length="50"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[longitude]"
+                      name="longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[name]"
+                      length="50"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[postalCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[postalCode]"
+                      length="50"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[postalCode]"
+                      name="postalCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[province]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[province]"
+                      length="50"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[province]"
+                      name="province"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[sourceURLs]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[sourceURLs]"
+                      length="50"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[sourceURLs]"
+                      name="sourceURLs"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[websites]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[websites]"
+                      length="50"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[websites]"
+                      name="websites"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="50"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[dateAdded]"
+                      dataType="wstr"
+                      length="50"
+                      name="dateAdded" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[dateUpdated]"
+                      dataType="wstr"
+                      length="50"
+                      name="dateUpdated" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[address]"
+                      dataType="wstr"
+                      length="50"
+                      name="address" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[categories]"
+                      dataType="wstr"
+                      length="50"
+                      name="categories" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[city]"
+                      dataType="wstr"
+                      length="50"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[country]"
+                      dataType="wstr"
+                      length="50"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[keys]"
+                      dataType="wstr"
+                      length="50"
+                      name="keys" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[latitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[longitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="50"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[postalCode]"
+                      dataType="wstr"
+                      length="50"
+                      name="postalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[province]"
+                      dataType="wstr"
+                      length="50"
+                      name="province" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[sourceURLs]"
+                      dataType="wstr"
+                      length="50"
+                      name="sourceURLs" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].ExternalColumns[websites]"
+                      dataType="wstr"
+                      length="50"
+                      name="websites" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar datos\excel csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar datos\ODBC Source"
+              componentClassID="Microsoft.SSISODBCSrc"
+              contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Source"
+              name="ODBC Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select sum(monto) as pagos, substring(CONVERT(VARCHAR(10),posttime,112),5,2) as mes,
+datepart(yyyy,posttime) as año
+from Pagos
+group by substring(CONVERT(VARCHAR(10),posttime,112),5,2),datepart(yyyy,posttime)</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for fetching data."
+                  expressionType="Notify"
+                  name="FetchMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The mode used to access the database."
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="AccessMode">1</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar datos\ODBC Source.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[change_it.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[change_it.sa]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output]"
+                  errorRowDisposition="FailComponent"
+                  name="ODBC Source Output"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].Columns[pagos]"
+                      dataType="cy"
+                      externalMetadataColumnId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[pagos]"
+                      lineageId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].Columns[pagos]"
+                      name="pagos" />
+                    <outputColumn
+                      refId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].Columns[mes]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[mes]"
+                      length="2"
+                      lineageId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].Columns[mes]"
+                      name="mes" />
+                    <outputColumn
+                      refId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].Columns[año]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[año]"
+                      lineageId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].Columns[año]"
+                      name="año" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[pagos]"
+                      dataType="cy"
+                      name="pagos" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[mes]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="mes" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[año]"
+                      dataType="i4"
+                      name="año" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Error Output]"
+                  isErrorOut="true"
+                  name="ODBC Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Error Output].Columns[pagos]"
+                      dataType="cy"
+                      externalMetadataColumnId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[pagos]"
+                      lineageId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Error Output].Columns[pagos]"
+                      name="pagos" />
+                    <outputColumn
+                      refId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Error Output].Columns[mes]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[mes]"
+                      length="2"
+                      lineageId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Error Output].Columns[mes]"
+                      name="mes" />
+                    <outputColumn
+                      refId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Error Output].Columns[año]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[año]"
+                      lineageId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Error Output].Columns[año]"
+                      name="año" />
+                    <outputColumn
+                      refId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar datos\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Cargar datos\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar datos\Sort.Inputs[Sort Input].Columns[mes]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="mes"
+                      lineageId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].Columns[mes]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos\Sort.Inputs[Sort Input].Columns[año]"
+                      cachedDataType="i4"
+                      cachedName="año"
+                      lineageId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].Columns[año]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar datos\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar datos\Sort.Outputs[Sort Output].Columns[mes]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\Cargar datos\Sort.Outputs[Sort Output].Columns[mes]"
+                      name="mes"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].Columns[mes]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\Sort.Outputs[Sort Output].Columns[año]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos\Sort.Outputs[Sort Output].Columns[año]"
+                      name="año"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output].Columns[año]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar datos\tabla sql"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Destination"
+              name="tabla sql"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"dbo"."Fast_Food_Restaurants"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar datos\tabla sql.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[change_it.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[change_it.sa]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].Columns[dateAdded]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="dateAdded"
+                      externalMetadataColumnId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[dateAdded]"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[dateAdded]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].Columns[dateUpdated]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="dateUpdated"
+                      externalMetadataColumnId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[dateUpdated]"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[dateUpdated]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].Columns[address]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="address"
+                      externalMetadataColumnId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[address]"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[address]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].Columns[categories]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="categories"
+                      externalMetadataColumnId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[categories]"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[categories]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].Columns[city]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="city"
+                      externalMetadataColumnId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[city]"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[city]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].Columns[country]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="country"
+                      externalMetadataColumnId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[country]"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[country]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].Columns[keys]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="keys"
+                      externalMetadataColumnId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[keys]"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[keys]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].Columns[latitude]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="latitude"
+                      externalMetadataColumnId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[latitude]"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[latitude]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].Columns[longitude]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="longitude"
+                      externalMetadataColumnId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[longitude]"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[longitude]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].Columns[name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="name"
+                      externalMetadataColumnId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[name]"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[name]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].Columns[postalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="postalCode"
+                      externalMetadataColumnId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[postalCode]"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[postalCode]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].Columns[province]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="province"
+                      externalMetadataColumnId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[province]"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[province]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].Columns[sourceURLs]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="sourceURLs"
+                      externalMetadataColumnId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[sourceURLs]"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[sourceURLs]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].Columns[websites]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="websites"
+                      externalMetadataColumnId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[websites]"
+                      lineageId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output].Columns[websites]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="text"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[dateAdded]"
+                      codePage="1252"
+                      dataType="text"
+                      name="dateAdded" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[dateUpdated]"
+                      codePage="1252"
+                      dataType="text"
+                      name="dateUpdated" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[address]"
+                      codePage="1252"
+                      dataType="text"
+                      name="address" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[categories]"
+                      codePage="1252"
+                      dataType="text"
+                      name="categories" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[city]"
+                      codePage="1252"
+                      dataType="text"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[country]"
+                      codePage="1252"
+                      dataType="text"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[keys]"
+                      codePage="1252"
+                      dataType="text"
+                      name="keys" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[latitude]"
+                      codePage="1252"
+                      dataType="text"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[longitude]"
+                      codePage="1252"
+                      dataType="text"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[name]"
+                      codePage="1252"
+                      dataType="text"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[postalCode]"
+                      codePage="1252"
+                      dataType="text"
+                      name="postalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[province]"
+                      codePage="1252"
+                      dataType="text"
+                      name="province" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[sourceURLs]"
+                      codePage="1252"
+                      dataType="text"
+                      name="sourceURLs" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input].ExternalColumns[websites]"
+                      codePage="1252"
+                      dataType="text"
+                      name="websites" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar datos\tabla sql.Outputs[ODBC Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output"
+                  synchronousInputId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar datos\tabla sql.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos\tabla sql.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar datos\tabla sql.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos\tabla sql.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Cargar datos.Paths[Flat File Source Output]"
+              endId="Package\Cargar datos\tabla sql.Inputs[ODBC Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Cargar datos\excel csv.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Cargar datos.Paths[ODBC Source Output]"
+              endId="Package\Cargar datos\Sort.Inputs[Sort Input]"
+              name="ODBC Source Output"
+              startId="Package\Cargar datos\ODBC Source.Outputs[ODBC Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Cargar datos"
+          TopLeft="101.5,91.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Cargar datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Cargar datos\ODBC Source"
+          TopLeft="7.5,5.5" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Cargar datos\Sort"
+          TopLeft="177.5,5.5" />
+        <EdgeLayout
+          Id="Package\Cargar datos.Paths[ODBC Source Output]"
+          TopLeft="149.5,26.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28,0"
+              Start="0,0"
+              End="20.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="20.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Cargar datos\excel csv"
+          TopLeft="439.5,221.5" />
+        <NodeLayout
+          Size="119,42"
+          Id="Package\Cargar datos\tabla sql"
+          TopLeft="125.5,125.5" />
+        <EdgeLayout
+          Id="Package\Cargar datos.Paths[Flat File Source Output]"
+          TopLeft="500,221.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-315,-54"
+              Start="0,0"
+              End="-315,-46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-23"
+                    Point2="0,-27"
+                    Point3="-4,-27" />
+                  <mssgle:LineSegment
+                    End="-311,-27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-311,-27"
+                    Point2="-315,-27"
+                    Point3="-315,-31" />
+                  <mssgle:LineSegment
+                    End="-315,-46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar datos\ODBC Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar datos\tabla sql">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
