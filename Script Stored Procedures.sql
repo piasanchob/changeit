@@ -98,7 +98,7 @@ CREATE PROCEDURE AplicarHabito AS
 
 
 	INSERT INTO dbo.HabitosAplicados(usuario, habito, posttime, localizacion)
-	VALUES(3, @habito, GETDATE(), @localizacion)
+	VALUES(@usuario, @habito, GETDATE(), @localizacion)
 
 GO
 
@@ -143,7 +143,7 @@ AS
 		SET @aporte = (SELECT nombre FROM dbo.Aportes WHERE dbo.Aportes.aporteid=@aporteid)
 
 		
-		SET @caption = @caption + '    ' +  @aporte + 'CANT: ' + CAST(@cantidad as nvarchar(100))
+		SET @caption = @caption + '    ' +  @aporte + ' CANT: ' + CAST(@cantidad as nvarchar(100))
 	END
 	
 	SET @habitocontador = @habitocontador + 1
@@ -173,7 +173,7 @@ CREATE PROCEDURE HacerPosteo AS
 
 	-- SE GENERA RESUMEN y SACO DATOS
 
-	SET @usuarioid = FLOOR(RAND()*100000 + 1)
+	SET @usuarioid = FLOOR(RAND()*100000-1 + 1)
 
 	EXEC GenerarResumen @usuarioid
 
@@ -214,6 +214,40 @@ CREATE PROCEDURE HacerPosteo AS
 
 GO
 
+CREATE PROCEDURE GenerarVariosPosts AS
+	
+	DECLARE @contador int
+	DECLARE @limite int
+
+	SET @contador=0
+	SET @limite = FLOOR(RAND()*(12000-2000)+2000)
+
+	WHILE @contador<@limite BEGIN
+
+		EXEC HacerPosteo
+		SET @contador = @contador+1
+	END
+GO
+
+CREATE PROCEDURE GenerarVariosHabitosAplicados AS
+
+	DECLARE @contador int
+	DECLARE @limite int
+
+	SET @contador=0
+	SET @limite = FLOOR(RAND()*(4000-1000)+1000)
+
+	WHILE @contador<@limite BEGIN
+
+		EXEC AplicarHabito
+		SET @contador = @contador+1
+	END
+
+GO
+
+
+
+
 
 DBCC CHECKIDENT ('changeit.dbo.Publicaciones', RESEED, 0);
 DBCC CHECKIDENT ('changeit.dbo.Tags', RESEED, 0);
@@ -223,6 +257,10 @@ SELECT * FROM RedesSociales
 SELECT * FROM Users
 select * from ValidacionRRSS
 select * from HabitosAplicados
+
+--EXEC GenerarVariosHabitosAplicados
+--EXEC GenerarVariosPosts
+
 
 
 select * from Publicaciones
@@ -238,7 +276,6 @@ select * from Resumenes
 EXEC RegistrarUsuario 'Twitter'
 
 
-EXEC HacerPosteo
-
+EXEC AplicarHabito
 
 select * from dbo.Fast_Food_Restaurants

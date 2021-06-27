@@ -207,6 +207,16 @@ VALUES
 ('No fumado', 'Ha logrado disminuir la contaminación ambiental y mejorar la salud de otros al no fumar',10)
 GO
 
+CREATE PROCEDURE InsertarTipoTags AS
+INSERT INTO dbo.TipoTag (nombre)
+VALUES 
+('Post'),
+('Ad')
+
+GO
+
+
+
 
 CREATE PROCEDURE LlenarBaseDeDatos AS
 EXEC InsertarRedesSociales
@@ -223,6 +233,7 @@ EXEC InsertarTipoHabitos
 EXEC InsertarHabitos
 EXEC InsertarTipoReacciones
 EXEC Insertar100kUsuarios
+EXEC InsertarAportes
 
 GO
 
