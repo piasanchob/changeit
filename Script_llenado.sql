@@ -149,7 +149,7 @@ VALUES
 ('Me gusta'),
 ('Views'),
 ('Links'),
-('Shares'),
+('Shares')
 
 GO
 

@@ -85,8 +85,8 @@ CREATE PROCEDURE AplicarHabito AS
 	SET @usuario = FLOOR(RAND()*100000 + 1)
 	SET @habito = FLOOR(RAND()*10 + 1)
 
-	SET @lat = (RAND()*90 + 1) 
-	SET @lon = (RAND()*180 + 1) 
+	SET @lat = (RAND()*89 + 1) 
+	SET @lon = (RAND()*179 + 1) 
 	
 
 	IF (select rand()) < 0.5
@@ -268,10 +268,51 @@ select * from Tags
 select * from Resumenes
 
 
--- delete from Publicaciones
--- delete from Tags
--- delete from Resumenes
--- delete from HabitosAplicados
+delete from Publicaciones
+delete from Tags
+delete from Resumenes
+delete from RedesSociales
+delete from EstadosPago
+delete from TipoPago
+delete from Merchants
+delete from TiposBitacoras
+delete from AppFuente
+delete from Severidades
+delete from EntityTypes
+delete from Trantypes
+delete from Entidad
+delete from Habitos
+delete from HabitosAplicados
+delete from TipoHabitos
+delete from TipoReaccion
+delete from Users
+delete from Aportes
+delete from AportesPorUsuario
+delete from ValidacionRRSS
+
+
+DBCC CHECKIDENT ('changeit.dbo.ValidacionRRSS', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.Publicaciones', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.Tags', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.Resumenes', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.RedesSociales', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.EstadosPago', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.TipoPago', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.Merchants', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.TiposBitacoras', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.AppFuente', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.Severidades', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.EntityTypes', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.Trantypes', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.Entidad', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.TipoHabitos', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.TipoReaccion', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.Users', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.Aportes', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.Habitos', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.HabitosAplicados', RESEED, 0);
+DBCC CHECKIDENT ('changeit.dbo.AportesPorUsuario', RESEED, 0);
+
 
 EXEC RegistrarUsuario 'Twitter'
 
@@ -279,3 +320,6 @@ EXEC RegistrarUsuario 'Twitter'
 EXEC AplicarHabito
 
 select * from dbo.Fast_Food_Restaurants
+
+EXEC GenerarVariosHabitosAplicados
+EXEC GenerarVariosPosts
