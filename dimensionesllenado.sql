@@ -75,8 +75,13 @@ GO
 
 EXEC insertions
 
-delete from restaurantes
-select * from campañas
-DBCC CHECKIDENT
-(ciudades,RESEED,0)
 
+
+DBCC CHECKIDENT
+(restaurantes,RESEED,0)
+delete from info
+select * from restaurantes
+select * from info
+select * from campañas
+select * from fechas
+select * from ciudades
