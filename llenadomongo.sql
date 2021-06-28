@@ -18,3 +18,7 @@ VALUES
 
 GO
 EXEC llenadomongo
+select * from mongoinfo2
+delete from mongoinfo 
+DBCC CHECKIDENT
+(mongoinfo,RESEED,0)

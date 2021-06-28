@@ -85,3 +85,19 @@ select * from info
 select * from campañas
 select * from fechas
 select * from ciudades
+
+
+
+update fechas set dia = 11, mes = 5, año = 2021 WHERE fechaid=1
+update fechas set dia = 6, mes = 6, año = 2021 WHERE fechaid=2
+update fechas set dia = 20, mes = 6, año = 2021 WHERE fechaid=3
+update fechas set dia = 24, mes = 12, año = 2020 WHERE fechaid=4
+update fechas set dia = 24, mes = 12, año = 2020 WHERE fechaid=5
+update fechas set dia = 14, mes = 2, año = 2021 WHERE fechaid=6
+update fechas set dia = 31, mes = 10, año = 2020 WHERE fechaid=7
+update fechas set dia = 31, mes = 10, año = 2020 WHERE fechaid=8
+update fechas set dia = 31, mes = 10, año = 2020 WHERE fechaid=9
+update fechas set dia = 26, mes = 9, año = 2020 WHERE fechaid=10
+update fechas set dia = 30, mes = 9, año = 2020 WHERE fechaid=11
+update fechas set dia = 1, mes = 2, año = 2021 WHERE fechaid=12
+update fechas set dia = 11, mes = 5, año = 2021 WHERE fechaid=13
