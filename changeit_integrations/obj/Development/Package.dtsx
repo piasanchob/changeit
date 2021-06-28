@@ -1,0 +1,2102 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/24/2021 3:52:03 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-CM9OC0K"
+  DTS:CreatorName="DESKTOP-CM9OC0K\Andrey Sancho"
+  DTS:DTSID="{D2609E63-4CA3-467A-B016-1AA2E9F2A33F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.167"
+  DTS:LocaleID="5130"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{7D8ED805-633C-4937-87CC-52BB2AAF87D5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CAD25729-F06F-45E7-B135-0C0723F27857}"
+      DTS:ObjectName="Administrador de conexiones de archivos planos">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="5130"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\user\Documents\TEC\BASES1NUÑEZ\Fast_Food_Restaurants.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{0328E80F-F91E-4FF5-BA08-F0FAA24449F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateAdded"
+              DTS:DTSID="{160B7B3E-5D36-43F7-B740-50263EC2E4AD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateUpdated"
+              DTS:DTSID="{7B4A3A6A-F094-4C7D-912E-8A075527AF02}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="address"
+              DTS:DTSID="{FB755E2E-62A1-4799-9143-7344B5B04E67}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="categories"
+              DTS:DTSID="{5ED78B0F-3760-49FF-8262-9A5FFA1DBD3C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{8F64372D-962D-456E-A92D-2382927A53B6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{07F11C88-663A-4D59-B3B5-4B501E60CA67}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="keys"
+              DTS:DTSID="{D6A55F2E-C821-4368-8B96-B0BA507C1EE1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{EB4B9E3E-5ED3-4B6C-B2EC-D6FAF4E87B96}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{39DB6522-DE6D-43F1-A3A8-CEE50DA2ECB4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{0592B5D8-AB70-4683-8EB0-9951C16C6D9B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postalCode"
+              DTS:DTSID="{97606F71-778F-452F-B9AA-F04F53E13A31}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="province"
+              DTS:DTSID="{28A159D5-F287-4DA0-95DB-42D2F9872D39}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sourceURLs"
+              DTS:DTSID="{B92DA1ED-9D49-4E0A-A2D8-12C6D28C2CB4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="websites"
+              DTS:DTSID="{49B1E8F5-608C-4EF4-9FB0-A4E402763299}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1620E117-17EC-4DCB-B607-C942FE826F3A}"
+      DTS:ObjectName="Administrador de conexiones de archivos planos 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="5130"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\user\Documents\TEC\BASES1NUÑEZ\Fast_Food_Restaurants.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ï»¿id"
+              DTS:DTSID="{4440DBCF-E2E5-4028-98D8-B70E69EF6A50}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateAdded"
+              DTS:DTSID="{4ED5A504-B4AD-4244-9A97-F5E51F6AEB3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateUpdated"
+              DTS:DTSID="{BEEADA1B-26B5-448E-947E-4438B7827E4D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="address"
+              DTS:DTSID="{63815314-06C5-4A4A-83A5-937DE7C44736}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="categories"
+              DTS:DTSID="{9AD0F899-9126-4032-BEA7-79FDF457A486}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{E8CBF213-7203-44E9-B72B-1042FA8CAB4C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{D391DF61-26F1-4AF2-A1AE-3D4BC7723250}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="keys"
+              DTS:DTSID="{130EB0DE-5DD0-4976-8BF7-90F8045E1B90}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{70B32BE0-4DAA-4FFC-AB83-C4F23F24258C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{2F29B49D-CEB6-48C3-99F7-EF7A9FFB944B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{E64F4723-4222-459E-B531-FCD32F5149CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postalCode"
+              DTS:DTSID="{4E4CA519-5C2E-43D9-8C96-C45F4851537C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="province"
+              DTS:DTSID="{88D94CE7-1DE4-48CE-B447-C661E010FF68}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sourceURLs"
+              DTS:DTSID="{969E0560-55DE-4ED9-B6A1-3AB872046AA4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="websites"
+              DTS:DTSID="{60B1A24E-2EAE-452D-B8A4-E9E9F77D3BAF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{653DD05B-BBE1-45DB-8F3E-6F1F1833BE0A}"
+      DTS:ObjectName="Administrador de conexiones de archivos planos 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="5130"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\user\Documents\TEC\BASES1NUÑEZ\Fast_Food_Restaurants.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{373B5747-14E2-4223-B7B3-9E8126CE2836}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateAdded"
+              DTS:DTSID="{F1AF900A-5919-4A79-B893-9C22C0B7F544}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateUpdated"
+              DTS:DTSID="{75642B52-326E-4E1E-BC6A-F3C371F575BD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="address"
+              DTS:DTSID="{7125A325-1B64-4CB0-8D18-678115B50F0B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="categories"
+              DTS:DTSID="{36D40C5E-D9C5-4280-A0D0-854675551BE6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{B591794C-6384-4E7F-B69E-66C3E6DD9639}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{8F47B227-8049-4C2C-BAA8-45688A2CA153}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="keys"
+              DTS:DTSID="{34DEC3CF-FDDA-4929-B562-B683A810EFA3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{43D9D8F1-A460-4C10-B43A-AAF416E6DB6C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{D385EC67-F66C-4F4D-976C-FB057AF3406F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{CB11479C-1D9C-4912-9FDF-1DA2EDC14B36}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postalCode"
+              DTS:DTSID="{4B044CEF-C952-4747-BE00-053DCBEEF15C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="province"
+              DTS:DTSID="{29EF281D-D3B6-436B-885E-DFC1D9622CEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sourceURLs"
+              DTS:DTSID="{3ED3162F-FF09-46FB-B30B-E787A85D6B0E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="websites"
+              DTS:DTSID="{775E97B6-4473-47C4-922A-491A4DAA27C0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[changeit2]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{73EB3FCE-5B1D-4B1B-A84E-8D72ED8537F6}"
+      DTS:ObjectName="changeit2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=sa;Dsn=changeit2;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADrAdzZYt42RGsq/nvOe7F7v5PFVWtllChQ/Cger8ZZKQAAAAAOgAAAAAIAACAAAAC7PHXBz2l5Qtgpm3o7Y7+u4QpzerUwMCmQLpD28LUvtBAAAAABOGnn/yiFcBtebb6OXp6XQAAAADb0L2ipKCe/An1/VuQWOYaZqq2RG/CMgZlhmrLxxhAQaj3AqZ7i4zU1ct2+9ma+Hrekoznd49Tse10GboJhGWY</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[change_it.sa]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{934B28E2-AA25-4221-BFDA-47A9CD2BADBF}"
+      DTS:ObjectName="change_it.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=sa;Dsn=change_it;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAADBcdw4kFKZx8b12n6yzxfaoPSulU+5zlIU4lhn4KJVAAAAAAOgAAAAAIAACAAAADUKbKWuDr97zOczT3rgpiCbq3gglrzfFKP5ZzuFfJ9yBAAAADV/PlAqxFT5vwye8i3uZatQAAAALC2QXV30UoHOhotEuSpCtr8cdF/MoOeyitYiKLdCk7/yZFxyak2tnwO+/N+6/FqMQRsl7FvsS0aaGmF8dFMF4s</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[conexion con csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{74F828AA-778A-4887-8FB3-4488529C7329}"
+      DTS:ObjectName="conexion con csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="5130"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\user\Documents\TEC\BASES1NUÑEZ\Fast_Food_Restaurants.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{A290882D-41D0-4553-9272-8534D08833F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateAdded"
+              DTS:DTSID="{E1F7C6B4-4AFF-407A-9597-8CEE882DF51A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateUpdated"
+              DTS:DTSID="{5E0B39B6-1347-4EBF-B4A1-B62EECBDEFC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="address"
+              DTS:DTSID="{AB97E73C-9B11-4EA9-9A31-150D821582F1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="categories"
+              DTS:DTSID="{490967F6-E445-4D17-AE65-3C1647F2E6DE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{8860BE5B-3B91-48B5-8A53-DA6D62BD7414}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{114F7E54-4EE2-42EA-9A0F-9196ACAE3B60}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="keys"
+              DTS:DTSID="{13D25278-EDBC-4C3E-9326-895C312C4CBB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{ABCA7480-4DAC-4A5B-A073-DC27D6DEE8B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{F47BD009-9B26-41CF-BFFC-EA9088E5DB94}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{E86FC345-F3AD-4A93-8EED-66CD7C9D7F79}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postalCode"
+              DTS:DTSID="{786611F1-1988-4238-88E0-EFFF9CDD6E9F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="province"
+              DTS:DTSID="{38177A51-701C-48F9-A900-360DD8409280}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sourceURLs"
+              DTS:DTSID="{F4FF6E74-A11A-49E8-A25F-680F0751319B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="websites"
+              DTS:DTSID="{034841F7-A966-42E2-BF95-C4F072E3DC86}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cvs1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{75F90E4A-2A4B-4501-9163-932FFC50BF8D}"
+      DTS:ObjectName="cvs1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="5130"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\user\Documents\TEC\BASES1NUÑEZ\Fast_Food_Restaurants.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{C9306409-7AAF-4151-A94D-F0AFC7B94A57}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateAdded"
+              DTS:DTSID="{A883BFF6-58F5-43E8-BD74-BC19220A2FEA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateUpdated"
+              DTS:DTSID="{1BF8655A-233B-4B32-973C-F3D20EC39CE9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="address"
+              DTS:DTSID="{49A47C63-6179-4D20-BC30-4D045EF09AC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="categories"
+              DTS:DTSID="{50CEB272-58D2-441A-9482-DD2B213A2397}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{797BC18D-0394-4C59-A60A-2F2673EF48A5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{48406B3B-BEAB-4796-BC1F-0CE09FC3A119}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="keys"
+              DTS:DTSID="{A8A25506-58AD-400E-9D4A-9ED39E7CB2BC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{1FBC13E6-250A-4EF2-8A2D-ADF24B1DD8FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{9756151B-B2BA-408E-B1C0-2C6C126131C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{BACE22F4-5EA2-4930-84FD-654C9221B442}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postalCode"
+              DTS:DTSID="{8F6EB67D-AC93-4EA1-A2D2-47A424D76CD2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="province"
+              DTS:DTSID="{9E64DAAA-917E-4779-8CD9-BEF840B27A4C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sourceURLs"
+              DTS:DTSID="{A7E0C3B8-0933-4B7C-8B75-4D41F03DBCBA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="websites"
+              DTS:DTSID="{3C515706-2975-488E-8A26-44C6B25F9EC1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-CM9OC0K]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C5B05401-7649-44B3-9FD6-11BB70658BA3}"
+      DTS:ObjectName="DESKTOP-CM9OC0K">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-CM9OC0K;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-CM9OC0K.changeit.sa]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{80A78A5A-5977-47E8-8AA9-0E907FA75950}"
+      DTS:ObjectName="DESKTOP-CM9OC0K.changeit.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-CM9OC0K;User ID=sa;Initial Catalog=changeit;Persist Security Info=True;Application Name=SSIS-Package-{80A78A5A-5977-47E8-8AA9-0E907FA75950}DESKTOP-CM9OC0K.changeit.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAuz0Um2oL9cNKN95G3y9upZrMrW3tC8ogo86ffxQDlJAAAAAAOgAAAAAIAACAAAAAG/I4I3G0MChz8ryetl//4E1g+jCYl07WnbGNZIIcBGRAAAAAtjPHvfraa9nXy1mzic3DWQAAAABRTuxxQkFs9gimSCmdiijFnEa1cH2gSWlk4BAkCJ2rCEWSBcfKBjntf3Gjp+/Sx41+xbolnoZoxwD6HipwMGrk</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-CM9OC0K.changeit.sa 1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{DBE2DFC4-3345-4754-9EAB-F28F03E60005}"
+      DTS:ObjectName="DESKTOP-CM9OC0K.changeit.sa 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-CM9OC0K;User ID=sa;Initial Catalog=changeit;Persist Security Info=True;Application Name=SSIS-Package-{DBE2DFC4-3345-4754-9EAB-F28F03E60005}DESKTOP-CM9OC0K.changeit.sa 1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACdt7c12e4BRFJSTCLwVeUs8hFHPArmPCCkTzBdH0RXwwAAAAAOgAAAAAIAACAAAAAxoRrO72Tf0dpLzYYw8kXeve5DVhRpCgzI55mxc06gKBAAAACSmIhgLTS8ovyqtwo1maQdQAAAAJ2EsfB7MbdRXpJHjR9diLTfQTpbVL0zIIU/fkzgn7qsiviXrWwd7J/jC2qsalBYlDCQvXrVL1stP4mkAi5ojFA</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-CM9OC0K\MSSQLSERVER01]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6BB9136E-B239-43A3-8E0F-1ACE7510B4D5}"
+      DTS:ObjectName="DESKTOP-CM9OC0K\MSSQLSERVER01">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-CM9OC0K\MSSQLSERVER01;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[excel]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{0B15B342-7B01-431A-80BC-15A7DD1CFEEC}"
+      DTS:ObjectName="excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="5130"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\user\Documents\TEC\BASES1NUÑEZ\Fast_Food_Restaurants.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{43D1D48F-C1F9-4E40-B71A-9AEF628CBFEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateAdded"
+              DTS:DTSID="{0C32DA02-3FEE-4F3D-B5DE-5285C76CD9DC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateUpdated"
+              DTS:DTSID="{2FE8A7BB-870B-4AEE-AB00-60D403D053A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="address"
+              DTS:DTSID="{3CE2ED6C-9156-4C86-91CE-7F4E6C22D0A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="categories"
+              DTS:DTSID="{D9083F13-A918-471E-A064-C32643DFBC15}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{8D81B70E-CBB4-4989-B094-6C2529B55E29}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{81733A1B-B54A-4D9E-82BA-77845C9672BC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="keys"
+              DTS:DTSID="{E1A0B797-F7C3-4B48-807C-E63847EC9126}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{A870BA10-DCC0-4C74-8B57-E99714C216C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{A76441A7-381D-4C34-AE96-83DDE7B05C17}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{625DE770-E4FC-4B38-89E9-E9E4374A7A36}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postalCode"
+              DTS:DTSID="{F50E6139-2E98-470B-A6FD-F3995D33C323}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="province"
+              DTS:DTSID="{6675C30F-FC32-4A56-8668-C6512EAA9D83}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[execel]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7F47EEB6-EDBE-4274-8429-282B3C30970D}"
+      DTS:ObjectName="execel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="5130"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\user\Documents\TEC\BASES1NUÑEZ\Fast_Food_Restaurants.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{B66A8365-6D11-4925-B442-CA945DA5F2B6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateAdded"
+              DTS:DTSID="{105F8646-BE0E-4A44-A260-5ECC3F413888}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateUpdated"
+              DTS:DTSID="{57600CBA-0865-4F56-AF38-1BE6C6FDB383}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="address"
+              DTS:DTSID="{3F6BD8FF-71D8-4199-BDE1-4B579A2B1C58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="categories"
+              DTS:DTSID="{F7429F22-21EF-45EF-8E28-D2E0FDCEDB80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{285F676C-9514-441A-9F27-93FE2A941754}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{D34F076E-DB83-41A1-BA8B-26D6E2064C78}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="keys"
+              DTS:DTSID="{8C8BF0B0-0D77-4FF4-A712-BC5E0097C12E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{68AC283A-7DE5-4D2C-92F0-FAA3615E5C06}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{E72EFFA8-C8AB-40C7-936E-233CA32CA73F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{01A29B23-B234-400A-B56F-337B22C2DAED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postalCode"
+              DTS:DTSID="{929B3974-1AAA-4915-B465-AD820778E24F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="province"
+              DTS:DTSID="{0DE472B4-C135-45C5-8B3B-383355933A12}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sourceURLs"
+              DTS:DTSID="{A4BFDFFD-54CB-4669-B0BE-ABD8D50DDC16}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="websites"
+              DTS:DTSID="{701270F3-4057-4E7F-99F8-230DEB5B7F18}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[nuevo]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{87AD77E7-9DB7-4392-A46E-0A6777934926}"
+      DTS:ObjectName="nuevo">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="5130"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\user\Documents\TEC\BASES1NUÑEZ\Fast_Food_Restaurants.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{C74EFCAD-2208-4318-866C-4FAA8D08F532}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateAdded"
+              DTS:DTSID="{356E04C9-5318-4B72-BA20-F367555903C5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dateUpdated"
+              DTS:DTSID="{2B736DFB-1075-490B-8408-9021D88FC06A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="address"
+              DTS:DTSID="{47FC1F47-0593-4DD2-9314-4482A6230D18}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="categories"
+              DTS:DTSID="{3B93029A-D5CD-4C89-9911-B32BC536AED5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{1FFB1E38-584A-4F49-B4A0-6AE29C90F88C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{73AFEBA8-E2C6-4EE3-98D3-B6DFE8869386}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="keys"
+              DTS:DTSID="{1023B82C-9AB1-4EBD-81B5-C9C370F38AA5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{7C9FB8FB-BD42-4969-BAC3-3B7292FFE54D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{E8A5531C-8407-4F9E-91CE-013CBF46CCD8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{E65C6111-D2EC-4F36-813B-819F0C766963}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postalCode"
+              DTS:DTSID="{435E5977-9AB4-4D7E-9C4E-EEBDE523F8C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="province"
+              DTS:DTSID="{23C54684-1688-4ECD-80C9-B19E2BE155C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sourceURLs"
+              DTS:DTSID="{2A0F4F25-4797-413B-A694-C60063A53F32}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="websites"
+              DTS:DTSID="{1E799B9D-36D4-430A-B193-C3AC6F16A842}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Cargar datos"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C0908A07-F330-4CFC-AD4B-3DBB9ED4A223}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar datos"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Cargar datos\Destino de ADO NET"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="Destino de ADO NET"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Fast_Food_Restaurants"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar datos\Destino de ADO NET.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-CM9OC0K.changeit.sa 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-CM9OC0K.changeit.sa 1]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[dateAdded]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="dateAdded"
+                      externalMetadataColumnId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[dateAdded]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[dateAdded]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[dateUpdated]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="dateUpdated"
+                      externalMetadataColumnId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[dateUpdated]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[dateUpdated]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[address]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="address"
+                      externalMetadataColumnId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[address]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[address]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[categories]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="categories"
+                      externalMetadataColumnId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[categories]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[categories]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="city"
+                      externalMetadataColumnId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[city]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[city]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[country]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="country"
+                      externalMetadataColumnId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[country]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[country]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[keys]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="keys"
+                      externalMetadataColumnId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[keys]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[keys]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="latitude"
+                      externalMetadataColumnId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[latitude]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[latitude]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="longitude"
+                      externalMetadataColumnId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[longitude]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[longitude]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[name]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="name"
+                      externalMetadataColumnId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[name]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[name]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[postalCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="postalCode"
+                      externalMetadataColumnId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[postalCode]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[postalCode]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[province]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="province"
+                      externalMetadataColumnId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[province]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[province]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[sourceURLs]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="sourceURLs"
+                      externalMetadataColumnId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[sourceURLs]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[sourceURLs]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[websites]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="websites"
+                      externalMetadataColumnId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[websites]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[websites]" />
+                    <inputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[id]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[id]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[dateAdded]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="dateAdded" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[dateUpdated]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="dateUpdated" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[address]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="address" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[categories]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="categories" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[city]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[country]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[keys]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="keys" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[latitude]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[longitude]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[postalCode]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="postalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[province]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="province" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[sourceURLs]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="sourceURLs" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[websites]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="websites" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar datos\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar datos\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar datos\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="5130"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar datos\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones de archivos planos 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones de archivos planos 2]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[dateAdded]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dateAdded]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[dateAdded]"
+                      name="dateAdded"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[dateUpdated]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dateUpdated]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[dateUpdated]"
+                      name="dateUpdated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[address]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[address]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[address]"
+                      name="address"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[categories]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[categories]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[categories]"
+                      name="categories"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[city]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[city]"
+                      name="city"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[country]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[country]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[country]"
+                      name="country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[keys]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[keys]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[keys]"
+                      name="keys"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[latitude]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[latitude]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[latitude]"
+                      name="latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[longitude]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[longitude]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[longitude]"
+                      name="longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[name]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[name]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[postalCode]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[postalCode]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[postalCode]"
+                      name="postalCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[province]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[province]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[province]"
+                      name="province"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[sourceURLs]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[sourceURLs]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[sourceURLs]"
+                      name="sourceURLs"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[websites]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[websites]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[websites]"
+                      name="websites"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[id]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dateAdded]"
+                      codePage="1252"
+                      dataType="text"
+                      name="dateAdded" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dateUpdated]"
+                      codePage="1252"
+                      dataType="text"
+                      name="dateUpdated" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[address]"
+                      codePage="1252"
+                      dataType="text"
+                      name="address" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[categories]"
+                      codePage="1252"
+                      dataType="text"
+                      name="categories" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city]"
+                      codePage="1252"
+                      dataType="text"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[country]"
+                      codePage="1252"
+                      dataType="text"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[keys]"
+                      codePage="1252"
+                      dataType="text"
+                      name="keys" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[latitude]"
+                      codePage="1252"
+                      dataType="text"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[longitude]"
+                      codePage="1252"
+                      dataType="text"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[name]"
+                      codePage="1252"
+                      dataType="text"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[postalCode]"
+                      codePage="1252"
+                      dataType="text"
+                      name="postalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[province]"
+                      codePage="1252"
+                      dataType="text"
+                      name="province" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[sourceURLs]"
+                      codePage="1252"
+                      dataType="text"
+                      name="sourceURLs" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[websites]"
+                      codePage="1252"
+                      dataType="text"
+                      name="websites" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="text"
+                      name="id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Cargar datos.Paths[Flat File Source Output]"
+              endId="Package\Cargar datos\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]"
+              name="Flat File Source Output"
+              startId="Package\Cargar datos\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Cargar datos"
+          TopLeft="103.5,93.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Cargar datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Cargar datos\Flat File Source"
+          TopLeft="388.5,265.5" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Cargar datos\Destino de ADO NET"
+          TopLeft="305.5,95.5" />
+        <EdgeLayout
+          Id="Package\Cargar datos.Paths[Flat File Source Output]"
+          TopLeft="464,265.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-70.5,-128"
+              Start="0,0"
+              End="-70.5,-120.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-60" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-60"
+                    Point2="0,-64"
+                    Point3="-4,-64" />
+                  <mssgle:LineSegment
+                    End="-66.5,-64" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-66.5,-64"
+                    Point2="-70.5,-64"
+                    Point3="-70.5,-68" />
+                  <mssgle:LineSegment
+                    End="-70.5,-120.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar datos\Destino de ADO NET">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

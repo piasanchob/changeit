@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/26/2021 12:05:08 AM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="5130"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{B668ADFF-1B4E-48C3-B15A-E7C8FB5F97BF}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{76C2CB36-3244-4D4A-9BC7-4339B209532B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD/MUdIS/KFYsASaIDDo+v3PMUFYXit13sf4ods2c9OGwAAAAAOgAAAAAIAACAAAABXT70B28upaMJiafPgEJLaI1kwHzTUBign8IrVqthDMxAAAABoRQuhp4k42l5U+5uIjsTrQAAAAJQuSUN5JPO2RzeTYibA2Ez+34Pme3s1tpo/VHO3OFWVuyET0FmeDTAzBAw3u3wFrl7UlJwvqa9WP+J2PKCkZu4</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAFf+Jc8gp0bZl+RUXIn29zfs9rLlfN7GAXB2n+1Q7UxQAAAAAOgAAAAAIAACAAAAAa7GuQ/48TdnNrcbzf1wSUHDDnIDUiMG/tmpqs8fwYjBAAAABQt8e64X4ItLo5wUStSDwfQAAAAFglkHc8m+nKoLjai8zOuhRLjW8ntlia4tZrx4/SCcg8JUVRlPnQYk1nWp2PwYgpU3zH0hZ8R6sJySVd2n2kPXo</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,37 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACoj3+1aeMNe/G8y5Gxus7axXCXQ24Qf7aaMBcOP9L0VgAAAAAOgAAAAAIAACAAAADhb6gnyLmPQ6wqlXKn/nrlckxRKP5JbeFGUIqOXSVtShAAAACDU3Cwas3swok2ANiiAA89QAAAAJENAoXSTFP6EptxGsUga7H50U5G+GjRE08gy5ePBm9tUCrplXITd5lzKoi61dYz4sw45Lm4+vDP256VxS+HqG4</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACud6+rQApA1mT+5kk5qvO59Mz7gHSilB9EEn0B1vGO4AAAAAAOgAAAAAIAACAAAAA5KWdX40KSEF2N9q724wGVKp2Ik0nFPXo8vdrQrT+MWBAAAAAr5lmHcOP1qKR+9ZMgYWXXQAAAAL0tzviRIP4z+hTtu5Wt2/NTbncE6Ds+kXYFqleCWC51cxl1F5xMlP1MOXbew78OZSnV8Clrjkl37MKN+dF65KM</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cubes1.sa]"
+      DTS:CreationName="ADO.NET:System.Data.Odbc.OdbcConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{DF18D92F-CD3D-48AC-875A-AC6464306F22}"
+      DTS:ObjectName="cubes1.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=sa;Dsn=cubes1;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADl2EdB83+Sm7JCpCBJL384/Pg8gZ66VVKR9A0Vlufv9QAAAAAOgAAAAAIAACAAAADRjUCScLSM7EBKsz79ph98a9FJlnU+b0hSzYWHCRDl0RAAAACA4DGJB5M561Bwv8G8jRX6QAAAAKIsJNkrLyge2fTMnrATie5aJZJtOEnKBusFTKZfThaSU8LHFTCibc1L4BfZKOq5/kKKAI2G6CI7/SrmX3FSv8Y</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cubes1.sa 1]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{416162B4-E871-4843-9D38-8664C183E7B8}"
+      DTS:ObjectName="cubes1.sa 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=sa;Dsn=cubes1;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADeim/6NQceL4Ypi2BN376XSvbrSju0ax0Calcu7NKUaAAAAAAOgAAAAAIAACAAAABQDGkmVDZ5K0hCFFotEZVnoBbd0IuZVSDhNSubGyoWJhAAAABdkqeGNqHWRVSERsGTCn1IQAAAAJHHGxtI8fjBy6JgGw+LPHOjDF4UDk0TRuKpVgAFHuoTjgk3YLYJG2r1TCchCwe3sfmvaZB33dpCjDuPbTGip1E</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -81,7 +111,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADXt56whLkg8y3j/gZmuZaFo2yXeWLh7Jq7eGXokTXBWgAAAAAOgAAAAAIAACAAAABPDuKqwqnw/KB5s9uaiScEYCdvFDvdSWuUwzs9gxeljRAAAAD5iZzvODDOJ7a4oNH7+GkpQAAAAOXOmbMZTHC18Z42NONJuoZxa0Vchmjzzq8osJDJjX1jaeUZHtpHEdFY58JU/RiN2CIQkvcF62/lkBN8OPr5ZTE</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABJGPPF1/lgumiqxNOEcGgaoZYWvwcZpYkRFP8eeL1/ngAAAAAOgAAAAAIAACAAAABYx6eaCnfUDOYyPKylyYn9oZGFtk0nNXS41PhVKkzEcRAAAAAcbCnskIeCBSBjUz9rvEyPQAAAAMPAAhhBjyKLvIIhVHawFhD/e0dWHDVDannAScQiwyeOyvN0p5GhF/o2yHVZCd1lX2IpC7mzuhhqBjjWBFELH6o</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -96,7 +126,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADgLGRmB9qda8MT2chatN0zC4sQtdPkpraYJL5EIf32eQAAAAAOgAAAAAIAACAAAABriUg8KKJKxVoFdKAVYY5hUO5Js8Zn8t0Mq9LwotiggRAAAAAAqDJ5XjqOgT5m+upvLhgiQAAAALSr7I7TA3egGejeIjpRHasZv1lVqHeB1Us4rar+zFtq9dIzlVZ5Vs4nbmc2gH3Fit8ZFkq3TT8beFbIZqCGMOk</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACWnyahlXvlyi87wMiImZ7GKeuUnWXRbnDSARiahdDOzwAAAAAOgAAAAAIAACAAAABQM6kAURS4+edZLH8L0aYAnYkfSTcIFiHGLRIaon5rYBAAAABocmbOLFiZ8cVYao/hSVZQQAAAABp4qEYkWBdISwGJ40suXWKt/OoIRz1gno6NfqOJk4du6IRZgyZIM+y6TNpcljp528uRhnIll/o8/AbbAkVnOw0</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -111,7 +141,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAHJm+jB0CuqorZeXN3C1hdCQBjDAmQTvRDVjNuG5dAaQAAAAAOgAAAAAIAACAAAABDTC/k9Zo/ZC+Ut5nFcIN7O7PRhQOntuN9gqnGfZ57nRAAAAA/kZExI8KJQeRXbqledaKgQAAAAO1QpNXqQxIKFUkIY6UZSFEUwrB5AlEZsX3EEpdkCa+mM739nZxrx7lftgeZRrjhBOaiLKG4CL0vn94qCPmASME</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADFDWDdfo5AaErR3egOz1OdRRSsHkPWvZ+iBqiDyXjixwAAAAAOgAAAAAIAACAAAACopOPwvszceVe4w10zZ5jJiMd7gyzvVsJeN1mu843wvRAAAAAzi53a4oJfEvpG46S0yYELQAAAABl+A0TzeeREvKxMSMMmQ21Ls03hnaKADouZ0rx/YgRLjctfrD9al1IGh7nyWFcXTIqiJ11N2/MGW3521fB7a2I</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -183,7 +213,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACWeIb0QnOy4Be4uq4yhL5JTQIgAolIIAP8T6N8PUJKewAAAAAOgAAAAAIAACAAAAA6IBalQKw5RihatUo8w0HLQfy6LbEdgeZ27MhTL5U0XBAAAABYW/0idYYHnrtkRpwpkhWOQAAAAKc05nrm9hpt3tXo+0bu2sgAkjo/B6rU2krmIxG2CFr1t8/cFyEdrmc2cPcikE+yejZsSC6swQj0FJ9XUa47lRQ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACd6QYJNPIoo63+a+hI8IUQES9PYQIrWRGe+nj44e5xzQAAAAAOgAAAAAIAACAAAADl/CPp/BitmkKbxmn2rROt3KmxumMABWFdZvnqRHLXrRAAAACkbxJ2by+12QxzbcaYOIa3QAAAADEy5RxprOVO6zNnrbynRNEhhS1DpfNukVjOQebKx08UIJ8VlkAYMy6cRyJM7N80ahj9CnvQtrjEgcBRcdPdyno</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -258,7 +288,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAyTX+k6lIshBrSRAnC1srhoyy9rfza/38923Qaz+1dawAAAAAOgAAAAAIAACAAAACU4vaOavqsXmixnTim62n6cYf0KCRToJ8/u9ft2rDqHxAAAABOZHvOtFe3yrevaUOWIOk5QAAAACFJMEvpWhtwmWzi9pqyfMtrR1NqwCgH204R0O3w16DUjBx4MsvIPFSZrAXGZs37bIE9uQDyLqtpybQP3f1i1h8</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABiQWnTKVT7iCNZw/k0S3ODuQ/KQuLbMI01R7nd6Y6A0gAAAAAOgAAAAAIAACAAAAArNlYAf/FHRMV5dzYDfrnXx7ovadir6ubiLkzePAZYlBAAAACXxJwT/wT60UYWjEoyWI8EQAAAAPKzK/5MYmlD8sX0YsUi6MzmdaR5hYocdHW/AylRc3n1Tfrlre/k33jAsWHBVn1DYUfKtu4pioOY50WSRX8ShlA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -273,7 +303,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAi1nQfZnTvvxqOPiRHPIStLqpRXJxo/y+K0u7kd2Pf5gAAAAAOgAAAAAIAACAAAAAomsDzyU6mWAG3dmrYk2LgJRk0FczB++1ddsH5RXKseRAAAABC1EBdx+zHTxLenTJCRIrlQAAAAPP1E9OGbFSqQvhHY+XJ2VzLdicW03KksDzAOX6/j2OmJ7YRsW5s0XDYoa2Gogp81oRaA8HZVOIuGIQrQ6X09lE</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACeRgpsAo39zROWYC2S3MtJrM6IomiA+VrGBchEme3GdgAAAAAOgAAAAAIAACAAAABJuneGn0+QBCTDx/r3orC8gocuu8UbJUJhBYHha/EMvBAAAAD8dIIvzKpKf+FRk9EKtnYoQAAAABN+Dhyjin3sTffW+nKHBqMzblNeE/a+z7uzE9bxCX1ZcunzmcGmDrSmVuBO+MB1mBPqQZ1VtlBYcCybW8aYtJc</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -288,7 +318,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABwiv4QyRTImIRoFJZbsozdStYIemIKfOtYaj68WLvhggAAAAAOgAAAAAIAACAAAAAwodnakrUZJzfksKznyPcOHbxmn+KUEEfSjSm3Fq6WThAAAACJqd3JfKJJo4S3RcDGhfMbQAAAACiG+WLP7Irl8JjfRZVk76esePzGs/pnJVo6sfj/b7phOu0PtCcYke8pI1h+Y8OEeFFrS4VyD8oaJXE52VJFIkg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB3YHupl6ji6ZmQs/FU1J6+L+eSZ5ej07Oo+rQCWmanPAAAAAAOgAAAAAIAACAAAADNFCIRgkNbLGnUYBplx46XIU7sGUO37JfgDqhPi5KeKBAAAAALcIJB7BeN6KNiIGCYyLb8QAAAAD2wkodQWSsTfMJGPKDUsiBRH6U/KW9iKrt7dTVHytSTeMa7q7Us245laE0s6L0n/5IdI4I7I/2WYjoR/L2nFZ8</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -303,7 +333,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADm62kLyQIo8Tc+ltUjWlf67cqi3BDWla/QOhJ2q8SYOQAAAAAOgAAAAAIAACAAAAD2buAZSu/GR+f5Pg2WXAKrBOQICK3XQtJ4Y0/B/UbokBAAAADxROnnpvQjaL3g1Y4dnLIWQAAAAODp0tOvkMzLF08CsSpMMlSrWT4WpZ6oHDMJu/PS6aZxDydxBZp2gqeHNcZgcHLHknZueJ19/oSxIS8op4RRU0k</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACbBAUO7rmMw6D78N8NSwd2CMaoO+zsQ7CK4A+F7jBG8QAAAAAOgAAAAAIAACAAAADP2DXVuR160UrKBpGKPe8/loxuotWj35bx2b844xhmwRAAAAATOdpSTnr7wjQQXsIAXBJ3QAAAAGVBKfhz2L0utAv+Z5X988La/QSg6APlQy3TqZSHqwPUNBy2rx20KWaxQrzlZEvdXkAn23L0RSuxFSmmP7LOiZE</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -318,7 +348,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB13Gfgfd19w9N+sk8vWWsHPfr8WVt5eK84xBTmt9K3pgAAAAAOgAAAAAIAACAAAAAB4GhYFk9JXqPNBaXgzrA0Eywi0llX/+FkUJaIK+T3zRAAAAB1rfdzS/mH8Sgo/gnIBYZgQAAAAJfj6axBWuLKeofy8tQhKt5cUAV6vEdUAPYlHkZoAlA3rGBa/DHNHeovXUvCADSLwegdm6B55FUKQlgKn/EGnwA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABUBF9m1p7RQdEOH25rtHmpTUBL918jTp1BA7M5b/qMRgAAAAAOgAAAAAIAACAAAACb7Wr37ErcbPejojiU5LQWs9J/pBdipy2DYbUfzq1KexAAAAA2ljv1c+QK9q50HqwocDNkQAAAAISvWn6UesZNPXglqxRJX71DawvjB2iwfBvkhabjMazOO5zOgFzX+COyMpngD/QCG6SsbYx8s8ddPBphrcjXnHA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -334,7 +364,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACpaR4FwHo5ScERC/4H4sgT0BhuAvw795prwb47ASDgzQAAAAAOgAAAAAIAACAAAAD2Se4pXvQKST26XX7WSNbWKLzRaLWZVXKg1vqIaZ3NaxAAAABBQdbnu2MZpwXfXp9aADVbQAAAAMnc8uT/agvOHSBQRGMfl5v32y/vJ0uO2MC94gUSSqrd7sIYRG92geRNPD7w58Y1DQJFrsVGQBmnDoUPhRvbY5I</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAZ7pLwQ459xvQl1WwkBM5UOaFAlcP/cw9poIIPaIA0mwAAAAAOgAAAAAIAACAAAAC+/2yKIwxGxMEmVIiXvvSbv/h0R9zkI05FepCHJ0fmcBAAAABO7cFaoBfGvv8jFFkVnvV9QAAAABUDog+5WeCN/BhGeUafsNU9GRfXu1JTb3H1k/YJ+40eY/V8WetiBz7GSIcDQaEz8ZeimxJojiC0O5I/NtPJgic</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -349,7 +379,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAhEYjNk9K/2x6ixayvrk9GBKWz7+bVu2NvXfv7pW8D3gAAAAAOgAAAAAIAACAAAACCzLZyUu/WEX5crgmzaNglCt6cLuIAnF0UIPCPKWVYVRAAAABc9C73QWvE2T47a/OcZA84QAAAADtYgqiRiU9WKZv1GwK/UoumucYpAh4lNYLqNAJsiYZGvvYLtYWJgeLjbvCYlARqlATj+lyasV86N3nBkk9fJkc</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmEYhrmusbkmCkUh9unJx0QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA7QTuUTcLMLGQl0GVACqgzeHRvSCqoJot6FFbN1BQVBgAAAAAOgAAAAAIAACAAAAAv2ZNZDSXyZIohB91GOY24NlAyfWQ46ZydVwz+eJAwVxAAAAD20Bb25FDkAWkrN4Qx1783QAAAAHZTL85q1KT93x0a4ubIpMZwhDONOc9/tZpyI0KfgBPU2dKZrv5A6tN+VJop4yda2rcKEYk/UkWWx2oxUd3gAME</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -383,7 +413,7 @@
                   dataType="System.String"
                   description="The name of the table to be fetched."
                   expressionType="Notify"
-                  name="TableName">"dbo"."mongoinfo"</property>
+                  name="TableName">"dbo"."mongoinfo2"</property>
                 <property
                   dataType="System.Int32"
                   description="Specify the number of rows fetched per batch."
@@ -428,8 +458,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\ODBC Destination.Connections[ODBCConnection]"
-                  connectionManagerID="Package.ConnectionManagers[thischangeit.sa 6]"
-                  connectionManagerRefId="Package.ConnectionManagers[thischangeit.sa 6]"
+                  connectionManagerID="Package.ConnectionManagers[thischangeit.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[thischangeit.sa]"
                   description="The ODBC runtime connection used to access the database."
                   name="ODBCConnection" />
               </connections>
@@ -450,6 +480,24 @@
                       externalMetadataColumnId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[_id]"
                       lineageId="Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[_id]" />
                     <inputColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].Columns[monto]"
+                      cachedDataType="r8"
+                      cachedName="monto"
+                      externalMetadataColumnId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[monto]"
+                      lineageId="Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[monto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].Columns[views]"
+                      cachedDataType="r8"
+                      cachedName="views"
+                      externalMetadataColumnId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[views]"
+                      lineageId="Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[views]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].Columns[shares]"
+                      cachedDataType="r8"
+                      cachedName="shares"
+                      externalMetadataColumnId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[shares]"
+                      lineageId="Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[shares]" />
+                    <inputColumn
                       refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].Columns[restaurante]"
                       cachedDataType="wstr"
                       cachedLength="255"
@@ -464,30 +512,12 @@
                       externalMetadataColumnId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[campaña]"
                       lineageId="Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[campaña]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].Columns[monto]"
-                      cachedDataType="r8"
-                      cachedName="monto"
-                      externalMetadataColumnId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[monto]"
-                      lineageId="Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[monto]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].Columns[fecha]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="fecha"
                       externalMetadataColumnId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[fecha]"
                       lineageId="Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[fecha]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].Columns[views]"
-                      cachedDataType="r8"
-                      cachedName="views"
-                      externalMetadataColumnId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[views]"
-                      lineageId="Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[views]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].Columns[shares]"
-                      cachedDataType="r8"
-                      cachedName="shares"
-                      externalMetadataColumnId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[shares]"
-                      lineageId="Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[shares]" />
                     <inputColumn
                       refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].Columns[ciudad]"
                       cachedDataType="wstr"
@@ -505,29 +535,11 @@
                       length="255"
                       name="_id" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[restaurante]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="restaurante" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[campaña]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="campaña" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[monto]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="monto" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[fecha]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="fecha" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[views]"
                       codePage="1252"
@@ -541,11 +553,47 @@
                       length="255"
                       name="shares" />
                     <externalMetadataColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[restaurante]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="restaurante" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[campaña]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="campaña" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[fecha]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="fecha" />
+                    <externalMetadataColumn
                       refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[ciudad]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="ciudad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[dia]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="dia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[mes]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="mes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[año]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="año" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -863,39 +911,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="142,42"
-          Id="Package\Data Flow Task\ODBC Source"
-          TopLeft="362.5,77.5" />
-        <NodeLayout
           Size="163,42"
           Id="Package\Data Flow Task\ODBC Destination"
-          TopLeft="102.5,63.5" />
+          TopLeft="70.5,60.5" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Data Flow Task\ODBC Source"
+          TopLeft="373.5,55.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[ODBC Source Output]"
-          TopLeft="362.5,98.5">
+          TopLeft="373.5,79">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-97,-14"
+              EndConnector="-140,0"
               Start="0,0"
-              End="-89.5,-14">
+              End="-132.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-44.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-44.5,0"
-                    Point2="-48.5,0"
-                    Point3="-48.5,-4" />
-                  <mssgle:LineSegment
-                    End="-48.5,-10" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-48.5,-10"
-                    Point2="-48.5,-14"
-                    Point3="-52.5,-14" />
-                  <mssgle:LineSegment
-                    End="-89.5,-14" />
+                    End="-132.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -908,7 +944,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\ODBC Source">
+    design-time-name="Package\Data Flow Task\ODBC Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -921,7 +957,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\ODBC Destination">
+    design-time-name="Package\Data Flow Task\ODBC Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
