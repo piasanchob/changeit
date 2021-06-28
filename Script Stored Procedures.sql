@@ -81,6 +81,8 @@ CREATE PROCEDURE AplicarHabito AS
 	DECLARE @lat decimal(8,6)
 	DECLARE @lon decimal(9,6)
 	DECLARE @localizacion geography
+	DECLARE @checksum_aux nvarchar(100)
+	DECLARE @checksum varbinary(500)
 
 	SET @usuario = FLOOR(RAND()*100000 + 1)
 	SET @habito = FLOOR(RAND()*10 + 1)
@@ -96,10 +98,16 @@ CREATE PROCEDURE AplicarHabito AS
 
 	SET @localizacion = geography::Point(@lat, @lon, 4326)
 
-
+	BEGIN TRAN
 	INSERT INTO dbo.HabitosAplicados(usuario, habito, posttime, localizacion)
 	VALUES(@usuario, @habito, GETDATE(), @localizacion)
 
+	SET @checksum_aux = (CAST(@usuario as nvarchar(30)) + CAST(@habito as nvarchar(30)) + CAST(GETDATE() AS nvarchar(30)) + CAST(@localizacion as nvarchar(100)))
+	SET @checksum = HASHBYTES('SHA2_256', @checksum_aux)
+
+	INSERT INTO dbo.Bitacoras (fecha, descripcion, userbitacora, ip, refid1, refid2, checksum, severidadbit, entitybit, appfuentebit, logtypebit)
+	VALUES (GETDATE(), 'Aplicación de Habito', @usuario ,'127.0.0.1', @usuario, @habito, @checksum, 4, 1, 1, 6)
+	COMMIT
 GO
 
 CREATE PROCEDURE GenerarResumen 
@@ -170,6 +178,9 @@ CREATE PROCEDURE HacerPosteo AS
 	DECLARE @redsocialid smallint
 	DECLARE @URLredsocial nvarchar(50)
 	DECLARE @postid bigint
+	DECLARE @pubilcacionid bigint
+	DECLARE @checksum_aux nvarchar(100)
+	DECLARE @checksum varbinary(500)
 
 	-- SE GENERA RESUMEN y SACO DATOS
 
@@ -209,6 +220,14 @@ CREATE PROCEDURE HacerPosteo AS
 	(@tag3, 1, @postid),
 	(@tag4, 1, @postid),
 	(@tag5, 1, @postid)
+
+	SET @pubilcacionid = (SELECT MAX(publicacionid) FROM dbo.Publicaciones)
+
+	SET @checksum_aux = (CAST(@usuarioid as nvarchar(30)) + CAST(@pubilcacionid as nvarchar(30)) + CAST(GETDATE() AS nvarchar(30)) + '127.0.0.1')
+	SET @checksum = HASHBYTES('SHA2_256', @checksum_aux)
+
+	INSERT INTO dbo.Bitacoras (fecha, descripcion, userbitacora, ip, refid1, refid2, checksum, severidadbit, entitybit, appfuentebit, logtypebit)
+	VALUES (GETDATE(), 'Posteo en red social', @usuarioid ,'127.0.0.1', @redsocialid, @pubilcacionid, @checksum, 4, 1, 6, 4)
 
 	COMMIT
 
@@ -320,6 +339,14 @@ EXEC RegistrarUsuario 'Twitter'
 EXEC AplicarHabito
 
 select * from dbo.Fast_Food_Restaurants
+
+select * from HabitosAplicados
+
+select * from Publicaciones
+
+select * from Resumenes
+
+select * from Bitacoras
 
 EXEC GenerarVariosHabitosAplicados
 EXEC GenerarVariosPosts
