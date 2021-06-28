@@ -1,0 +1,157 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3757a0ea-df5d-464b-9239-8224f05033db" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>changeit view</ID>
+  <Name>changeit view</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>changeit etl</DataSourceID>
+  <Schema>
+    <xs:schema id="changeit_x0020_view" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="changeit_x0020_view" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="27b672e4-72fd-4b70-b885-022c2b20dc7b">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_campañas" msprop:design-time-name="e1723482-3bf4-45ec-ac01-2d5f8aef5e97" msprop:DbTableName="campañas" msprop:FriendlyName="campañas" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="campañaid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="3d98e098-649a-49f4-b5a6-14c72e646491" msprop:DbColumnName="campañaid" msprop:FriendlyName="campañaid" type="xs:int" />
+                  <xs:element name="campaña" msprop:design-time-name="e7abc990-1a2c-457c-be71-761674be1ae5" msprop:DbColumnName="campaña" msprop:FriendlyName="campaña" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_ciudades" msprop:design-time-name="20731980-13bd-4465-86db-c10ca04826ca" msprop:DbTableName="ciudades" msprop:FriendlyName="ciudades" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ciudadid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="ca75df2a-9cf9-43c0-ae75-ef6f0c3df5ff" msprop:DbColumnName="ciudadid" msprop:FriendlyName="ciudadid" type="xs:int" />
+                  <xs:element name="ciudad" msprop:design-time-name="7c46318a-b14b-4700-a46b-86e6f1ac307d" msprop:DbColumnName="ciudad" msprop:FriendlyName="ciudad" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_fechas" msprop:design-time-name="902d0bb4-47b8-48ec-a2b9-3e84be3b01da" msprop:DbTableName="fechas" msprop:FriendlyName="fechas" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="fechaid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="9e146ca9-a98c-49fb-b4b8-c22eb58a09e7" msprop:DbColumnName="fechaid" msprop:FriendlyName="fechaid" type="xs:int" />
+                  <xs:element name="fecha" msprop:design-time-name="3f2b4921-d7b8-4448-9463-3d0a572b874b" msprop:DbColumnName="fecha" msprop:FriendlyName="fecha" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="dia" msprop:design-time-name="84772b08-0aca-49be-809f-486e2740ee86" msprop:DbColumnName="dia" msprop:FriendlyName="dia" type="xs:int" minOccurs="0" />
+                  <xs:element name="mes" msprop:design-time-name="21fb94e7-5ac0-4f91-8129-6c6edda5cca6" msprop:DbColumnName="mes" msprop:FriendlyName="mes" type="xs:int" minOccurs="0" />
+                  <xs:element name="año" msprop:design-time-name="eac52d24-82bc-4d1b-8215-bb30a8377540" msprop:DbColumnName="año" msprop:FriendlyName="año" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_info" msprop:design-time-name="89832971-98a2-4c68-8bfe-3f32be4f3d53" msprop:DbTableName="info" msprop:FriendlyName="info" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="459ad720-e571-42b5-84a4-2d7ebaef2336" msprop:DbColumnName="_id" msprop:FriendlyName="_id" type="xs:int" />
+                  <xs:element name="restauranteid" msprop:design-time-name="0c61a6c8-9599-4ac7-ab26-5f4f65c2168f" msprop:DbColumnName="restauranteid" msprop:FriendlyName="restauranteid" type="xs:int" minOccurs="0" />
+                  <xs:element name="campañaid" msprop:design-time-name="b0c09227-c21d-4c0b-be7c-c0af141a2912" msprop:DbColumnName="campañaid" msprop:FriendlyName="campañaid" type="xs:int" minOccurs="0" />
+                  <xs:element name="monto" msprop:design-time-name="833f3f5a-c4b7-4d3d-bf7d-766c06934e38" msprop:DbColumnName="monto" msprop:FriendlyName="monto" type="xs:int" minOccurs="0" />
+                  <xs:element name="fechaid" msprop:design-time-name="9151dfe1-2a57-4044-91bb-a4992107e150" msprop:DbColumnName="fechaid" msprop:FriendlyName="fechaid" type="xs:int" minOccurs="0" />
+                  <xs:element name="views" msprop:design-time-name="20cbf622-35d2-4219-9a3e-9f065523653c" msprop:DbColumnName="views" msprop:FriendlyName="views" type="xs:int" minOccurs="0" />
+                  <xs:element name="shares" msprop:design-time-name="67048c51-1341-46f2-941e-748e7e3be2b2" msprop:DbColumnName="shares" msprop:FriendlyName="shares" type="xs:int" minOccurs="0" />
+                  <xs:element name="ciudadid" msprop:design-time-name="6fcacc45-56ff-45af-a230-4d6a05cdad51" msprop:DbColumnName="ciudadid" msprop:FriendlyName="ciudadid" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_restaurantes" msprop:design-time-name="6fa3de5c-7699-423a-b18d-05124ff16c5d" msprop:DbTableName="restaurantes" msprop:FriendlyName="restaurantes" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="restauranteid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="5afeb513-686e-4df8-a732-a6e4eea8befd" msprop:DbColumnName="restauranteid" msprop:FriendlyName="restauranteid" type="xs:int" />
+                  <xs:element name="restaurante" msprop:design-time-name="ae3960f0-a32c-4518-8c63-f640f5df4d31" msprop:DbColumnName="restaurante" msprop:FriendlyName="restaurante" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_campañas" />
+          <xs:field xpath="campañaid" />
+        </xs:unique>
+        <xs:unique name="dbo_ciudades_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_ciudades" />
+          <xs:field xpath="ciudadid" />
+        </xs:unique>
+        <xs:unique name="dbo_fechas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_fechas" />
+          <xs:field xpath="fechaid" />
+        </xs:unique>
+        <xs:unique name="dbo_info_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_info" />
+          <xs:field xpath="_id" />
+        </xs:unique>
+        <xs:unique name="dbo_restaurantes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_restaurantes" />
+          <xs:field xpath="restauranteid" />
+        </xs:unique>
+        <xs:keyref name="FK_info_campañas" refer="Constraint1">
+          <xs:selector xpath=".//dbo_info" />
+          <xs:field xpath="campañaid" />
+        </xs:keyref>
+        <xs:keyref name="FK_info_restaurantes" refer="dbo_restaurantes_Constraint1">
+          <xs:selector xpath=".//dbo_info" />
+          <xs:field xpath="restauranteid" />
+        </xs:keyref>
+        <xs:keyref name="FK_info_ciudades" refer="dbo_ciudades_Constraint1">
+          <xs:selector xpath=".//dbo_info" />
+          <xs:field xpath="ciudadid" />
+        </xs:keyref>
+        <xs:keyref name="FK_info_fechas" refer="dbo_fechas_Constraint1">
+          <xs:selector xpath=".//dbo_info" />
+          <xs:field xpath="fechaid" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <changeit_x0020_view xmlns="" />
+  </Schema>
+</DataSourceView>
